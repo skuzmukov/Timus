@@ -9,13 +9,10 @@ public class Task_1068 {
         int n = (int) in.nval;
         int sum = 0;
         if (n > 0) {
-            for (int i = 1; i <= n; i++) {
-                sum += i;
-            }
+            sum = n * (n + 1) / 2;
         } else {
-            for (int i = 1; i >= n; i--) {
-                sum += i;
-            }
+            n *= -1;
+            sum = (-1) * (n * (n + 1) / 2) + 1;
         }
         out.print(sum);
         out.flush();
